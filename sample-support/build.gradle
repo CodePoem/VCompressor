@@ -23,16 +23,16 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     // 集成测试依赖
-    androidTestImplementation "androidx.test.ext:junit:$androidxTestExtJunitVer"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$androidxTestEspressoCoreVer"
+    androidTestImplementation "com.android.support.test:runner:$supportTestRunnerJunitVer"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$supportTestEspressoCoreVer"
     // 单元测试依赖
-    testImplementation "androidx.test.ext:junit:$androidxTestExtJunitVer"
+    testImplementation "junit:junit:$supportjunitVer"
     // 业务依赖
-    implementation "androidx.appcompat:appcompat:$androidxAppcompatVer"
-    implementation "androidx.constraintlayout:constraintlayout:$androidxConstraintLayoutVer"
-    implementation "androidx.recyclerview:recyclerview:$androidxRecyclerViewVer"
+    implementation "com.android.support:appcompat-v7:$supportAppcompatVer"
+    implementation "com.android.support.constraint:constraint-layout:$supportConstraintLayoutVer"
+    implementation "com.android.support:recyclerview-v7:$supportRecyclerViewVer"
 
-    implementation project(':v-compressor')
-    implementation "com.vdreamers.vmediaselector:v-media-selector:$androidxVMediaSelectorVer"
-    implementation "com.github.bumptech.glide:glide:$androidxGlideVer"
+    implementation project(':v-compressor-support')
+    implementation "com.vdreamers.vmediaselector:v-media-selector-support:$supportVMediaSelectorVer"
+    implementation "com.github.bumptech.glide:glide:$supportGlideVer"
 }

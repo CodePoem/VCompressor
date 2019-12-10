@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InBitmapActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/item_section_title"
+            android:text="原图" />
+
+        <ImageView
+            android:id="@+id/iv_raw"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            tools:src="@drawable/love" />
+
+        <TextView
+            android:id="@+id/tv_raw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:text="原图" />
+
+        <TextView
+            style="@style/item_section_title"
+            android:text="质量压缩" />
+
+
+        <ImageView
+            android:id="@+id/iv_compress_quality"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            tools:src="@drawable/love" />
+
+        <TextView
+            android:id="@+id/tv_compress_quality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:text="质量压缩" />
+
+        <TextView
+            style="@style/item_section_title"
+            android:text="尺寸压缩 inSampleSize 邻近采样" />
+
+        <ImageView
+            android:id="@+id/iv_compress_size_in_sample_size"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            tools:src="@drawable/love" />
+
+        <TextView
+            android:id="@+id/tv_compress_size_in_sample_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:text="尺寸压缩 邻近采样" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

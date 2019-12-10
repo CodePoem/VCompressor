@@ -1,2 +1,7 @@
-include ':sample', ':v-compressor'
+if (IsSupport == "true") {
+    include ':sample-support', ':v-compressor-support'
+} else {
+    include ':sample', ':v-compressor'
+}
+
 rootProject.name='VCompressor'
