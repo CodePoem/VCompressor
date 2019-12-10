@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sample.InBitmapActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/item_section_title"
+            android:text="原图" />
+
+        <ImageView
+            android:id="@+id/iv_raw"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            tools:src="@drawable/love" />
+
+        <TextView
+            android:id="@+id/tv_raw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:text="原图" />
+
+        <TextView
+            style="@style/item_section_title"
+            android:text="缩小至1/4复用" />
+
+
+        <ImageView
+            android:id="@+id/iv_in_bitmap"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            tools:src="@drawable/love" />
+
+        <TextView
+            android:id="@+id/tv_in_bitmap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:text="复用" />
+
+        <TextView
+            style="@style/item_section_title"
+            android:text="原图 inMutable 设置为 false 后 不复用" />
+
+        <ImageView
+            android:id="@+id/iv_no_in_bitmap"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            tools:src="@drawable/love" />
+
+        <TextView
+            android:id="@+id/tv_no_in_bitmap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:text="未复用" />
+
+        <TextView
+            style="@style/item_section_title"
+            android:text="自由发挥" />
+
+        <RadioGroup
+            android:id="@+id/rg_in_mutable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inMutable :" />
+
+            <RadioButton
+                android:id="@+id/rb_in_mutable_true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="true" />
+
+            <RadioButton
+                android:id="@+id/rb_in_mutable_false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="false" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rg_in_scaled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inScaled :" />
+
+            <RadioButton
+                android:id="@+id/rb_in_scaled_true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="true" />
+
+            <RadioButton
+                android:id="@+id/rb_in_scaled_false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="false" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inSampleSize :" />
+
+            <EditText
+                android:id="@+id/et_in_sample_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inDensity :" />
+
+            <EditText
+                android:id="@+id/et_in_density"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inTargetDensity :" />
+
+            <EditText
+                android:id="@+id/et_in_target_density"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inScreenDensity :" />
+
+            <EditText
+                android:id="@+id/et_in_screen_density"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_try_in_bitmap"
+            style="@style/item_button"
+            android:text="尝试复用" />
+
+        <ImageView
+            android:id="@+id/iv_free_in_bitmap"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            tools:src="@drawable/love" />
+
+        <TextView
+            android:id="@+id/tv_free_in_bitmap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:text="自由发挥" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

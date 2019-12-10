@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">VCompressor</string>
+    <string name="compress_file">love.png</string>
+</resources>

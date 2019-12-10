@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // 集成测试依赖
+    androidTestImplementation "androidx.test.ext:junit:$androidxTestExtJunitVer"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidxTestEspressoCoreVer"
+    // 单元测试依赖
+    testImplementation "androidx.test.ext:junit:$androidxTestExtJunitVer"
+    // 业务依赖
+    compileOnly "androidx.appcompat:appcompat:$androidxAppcompatVer"
+}
+
+apply from: "$rootProject.projectDir/uploadBintray.gradle"
